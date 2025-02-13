@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Jelly Bean List{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <!-- Title and Add Button Layout -->
+    <div class="row align-items-center mb-4 bg-white shadow-sm py-3 sticky-top">
+        <div class="col-4"></div>
+        <div class="col-4 text-center">
+            <h2 class="mb-0"><b>Jelly Bean Flavors</b></h2>
+        </div>
+        <div class="col-4 text-end">
+            <a href="{% url 'addflavor' %}" class="btn btn-success btn-md"><b>Add New Flavor</b></a>
+        </div>
+    </div>
+
+    <div class="row g-3">
+        {% for flavor in jellyBeanFlavors %}
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3"> <!-- Responsive Column -->
+                <div class="card shadow-sm h-100">
+                    <!-- Image -->
+                    <img src="{{ flavor.photoUrl }}" class="card-img-top" alt="{{ flavor.name }}" style="height: 120px; object-fit: cover;">
+
+                    <div class="card-body p-2">
+                        <!-- Name -->
+                        <h6 class="card-title text-center mb-1"><b>{{ flavor.name }}</b></h6>
+                        <!-- Description -->
+                        <p class="card-text text-muted small text-center">{{ flavor.description }}</p>
+
+                        <!-- Buttons -->
+                        <div class="d-flex justify-content-end gap-2">
+                            <a href="{% url 'updateflavor' flavor.id %}" class="btn btn-primary btn-sm"><b>Edit</b></a>
+                            <a href="{% url 'deleteflavor' flavor.id %}" onclick="return confirmDelete('{{ flavor.name}}')" class="btn btn-danger btn-sm"><b>Delete</b></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

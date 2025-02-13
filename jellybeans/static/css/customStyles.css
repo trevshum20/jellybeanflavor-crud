@@ -1,0 +1,86 @@
+/* Custom Navbar Styles */
+.navbar {
+    background-color: #192F56 !important; /* Your custom RGB color */
+}
+
+/* Ensure brand text is visible */
+.navbar-brand {
+    font-weight: bold;
+    color: white !important;
+}
+
+/* Style the navigation links */
+.navbar-nav .nav-link {
+    color: #C6D0DB !important;
+    font-size: 18px;
+    padding: 20px 30px;
+    font-weight: bold;
+}
+
+/* Change link color on hover */
+.navbar-nav .nav-link:hover {
+    color: white !important; /* Gold color for contrast */
+}
+
+/* Navbar Toggler Icon (for mobile menu) */
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.navbar-toggler-icon {
+    background-color: #C6D0DB;
+}
+
+.navbar-toggler-icon:hover {
+    background-color: white;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #EFF2F5; /* Light grayish blue background */
+    text-align: center; /* Center align content */
+    padding: 20px 0;
+}
+
+/* Footer links */
+footer a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Dark gray */
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+/* Hover effect */
+footer a:hover {
+    color: #999; /* Light gray on hover */
+}
+
+/* Social icons */
+/* Ensure icons are visible */
+footer i {
+    font-size: 30px !important;
+    display: inline-block !important;
+    color: #333 !important;
+}
+
+/* Ensure links containing icons are properly spaced */
+footer a {
+    margin: 0 10px;
+}
+
+/* Ensure icons change color on hover */
+footer i:hover {
+    color: #999 !important;
+}
+
+/* Add a smooth hover effect to the cards */
+.card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Expand slightly on hover */
+.card:hover {
+    transform: scale(1.05); /* Slightly increase size */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Add a soft shadow */
+}
+

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}About This Project{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <!-- Page Title -->
+    <div class="text-center mb-4">
+        <h2 class="fw-bold">About This Project</h2>
+        <p class="text-muted">A simple CRUD app built for the final interview for the Software Developer role at the BYU Harold B. Lee Library.</p>
+    </div>
+
+    <!-- Content Section -->
+    <div class="row align-items-center">
+        <!-- Left Column (Text) -->
+        <div class="col-lg-6 mb-4">
+            <p class="lead" style="text-align: right">
+                This CRUD application allows an internal admin to <b>manage available jelly bean flavors</b>.
+                It is part of a <b>job interview project</b> with the <b>BYU Harold B. Lee Library</b>, 
+                and I am incredibly excited about this opportunity!
+            </p>
+            <p class="text-muted" style="text-align: right">
+                This app provides functionality to <b>Create, Read, Update, and Delete</b> jelly bean flavors, ensuring
+                a simple and efficient way to keep the library’s jelly bean collection up to date.
+            </p>
+        </div>
+
+        <!-- Right Column (BYU Library Image) -->
+        <div class="col-lg-6 text-center">
+            <img src="https://trevorshumway.com/images/jellybeans/library.jpg" 
+                 alt="BYU Harold B. Lee Library" 
+                 class="img-fluid rounded shadow-sm hover-scale">
+        </div>
+    </div>
+
+    <!-- Jelly Bean Image Section -->
+    <div class="text-center my-5">
+        <h3 class="fw-bold">Jelly Bean Flavors</h3>
+        <p class="text-muted">A vibrant collection of flavors, managed with this CRUD app.</p>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <img src="https://trevorshumway.com/images/jellybeans/jellybeans.jpg" 
+                         alt="Jelly Bean Flavors" 
+                         class="img-fluid rounded shadow-sm hover-scale">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

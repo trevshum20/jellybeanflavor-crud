@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BYU Jelly Beans</title>
+    <link rel="icon" type="image/x-icon" href="https://trevorshumway.com/images/tlsfavicon.ico">
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+    <!-- Option 1: Include in HTML -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="{% static 'css/customStyles.css' %}">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+          <!-- Left-aligned brand, larger font -->
+          <a class="navbar-brand fs-3" href="{% url 'jellybeans' %}">BYU Jelly Beans</a>
+  
+          <!-- Navbar toggler for mobile -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <!-- Right-aligned links -->
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link" href="{% url 'jellybeans' %}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="{% url 'about' %}">About</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+    </nav>
+    <div>
+      {% block content %}
+      
+      {% endblock %}
+    </div>
+  <!-- Footer -->
+    <footer class="bg-light text-center text-small py-3">
+      <div class="container-fluid">
+          <p class="mb-1">
+              <a href="https://trevorshumway.com" target="_blank">Trevor Shumway &copy; 2025</a> | <a href="tel:801-472-6602">801-472-6602</a> | <a href="mailto:trevshum20@gmail.com">trevshum20@gmail.com</a>
+          </p>
+          <div>
+              <a
+                  href="https://github.com/trevshum20"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-dark"
+                  aria-label="GitHub"
+                  style="marginRight: 20px; fontSize: 30px">
+                  <i class="bi bi-github"></i>
+              </a>
+              <a
+                  href="https://www.linkedin.com/in/trevor-shumway1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-dark"
+                  aria-label="LinkedIn"
+                  style="marginRight: 20px; fontSize: 30px">
+                  <i class="bi bi-linkedin"></i>
+              </a>
+              <a
+                  href="https://www.salesforce.com/trailblazer/tshumway4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-dark"
+                  aria-label="Trailhead"
+                  style="fontSize: 30px">
+                  <i class="bi bi-cloud"></i>
+              </a>
+          </div>
+        </div>
+    </footer>
+  </body>
+</html>
+
+<!-- Bootstrap JavaScript CDN -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+  crossorigin="anonymous"
+></script>
+
+<script>
+  function confirmDelete(name) {
+      return confirm(`Are you sure you want to delete "${name}"? This action cannot be undone.`);
+  }
+</script>
