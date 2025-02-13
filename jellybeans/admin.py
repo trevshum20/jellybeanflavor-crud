@@ -2,5 +2,5 @@ from django.contrib import admin
 
 from .models import JellybeanFlavor
 
-# Register your models here.
+# Register JellybeanFlavor model
 admin.site.register(JellybeanFlavor)

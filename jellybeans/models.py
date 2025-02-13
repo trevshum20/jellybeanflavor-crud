@@ -1,7 +1,7 @@
 from django.db import models
 
-# Create your models here.
 
+# Simple flavor model used to scaffold and migrate to the database
 class JellybeanFlavor(models.Model):
     name = models.CharField(max_length=255, unique=True)
     description = models.CharField(max_length=255, blank=True)

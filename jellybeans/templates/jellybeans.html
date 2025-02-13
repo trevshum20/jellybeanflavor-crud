@@ -1,3 +1,5 @@
+<!-- Trevor Shumway 2/13/24 -->
+<!-- List all jelly bean flavors (READ) and include interface for CREATE, UPDATE, and DELETE -->
 {% extends "base.html" %}
 {% block title %}Jelly Bean List{% endblock %}
 
@@ -16,7 +18,8 @@
 
     <div class="row g-3">
         {% for flavor in jellyBeanFlavors %}
-            <div class="col-6 col-sm-6 col-md-4 col-lg-3"> <!-- Responsive Column -->
+            <div class="col-6 col-sm-6 col-md-4 col-lg-3">
+                <!-- Flavor Card -->
                 <div class="card shadow-sm h-100">
                     <!-- Image -->
                     <img src="{{ flavor.photoUrl }}" class="card-img-top" alt="{{ flavor.name }}" style="height: 120px; object-fit: cover;">
