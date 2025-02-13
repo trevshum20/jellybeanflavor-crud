@@ -1,4 +1,4 @@
-# 🍬 Jelly Bean CRUD App  
+# 🍬 Jelly Bean Flavor CRUD App  
 
 A simple CRUD application built as part of the final interview for the **Software Developer** role at the **BYU Harold B. Lee Library**! 🎉  
 
