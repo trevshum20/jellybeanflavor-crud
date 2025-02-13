@@ -1,4 +1,5 @@
 from django.contrib import messages
+from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
 
 from .models import JellybeanFlavor
@@ -52,3 +53,7 @@ def updateFlavor(request, flavorId):
     }
 
     return render(request, "updateFlavor.html", context)
+
+def healthCheck(request):
+    #Returns a simple JSON response to indicate the app is healthy
+    return JsonResponse({"status": "ok"}, status=200)
