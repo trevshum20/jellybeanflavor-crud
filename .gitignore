@@ -22,3 +22,8 @@ media/
 # Ignore Django migrations (optional, if not tracking them)
 **/migrations/*.py
 **/migrations/*.pyc
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

@@ -1,0 +1,4 @@
+gunicorn
+whitenoise
+django==4.2.19
+python-dotenv
